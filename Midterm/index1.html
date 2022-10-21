@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web form</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #divTopLabel {
+            width:500px;
+            height:auto;
+            margin: auto;
+            padding: 50px;
+            border: 1px solid;   
+            font-size: 50px;       
+        }
+        #divMainContent{
+            width: 90%;
+            border: 1px solid;
+            padding: 10px;
+            height: 730px;
+            align-items: center;
+            margin: auto;
+
+        }
+        .contentItem{
+            width:18%;
+            float: left;           
+            height: auto;
+            margin: 10px;
+        }
+        .image{
+            width: 100%;
+            border: 1px solid;
+        }
+        #btnPlaceOrder{
+            width: 150px;
+            margin-left: 50%;
+            padding: 5px;         
+            font-size: 20px;
+        }
+       label{
+        font-size: 20px;
+       }
+       /* Parent Container */
+.content_img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+
+    margin:10px 20px 50px 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: red;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;  
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+    cursor: pointer;
+}    
+
+.content_img:hover div{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;        
+}
+       
+    </style>
+</head>
+<body>
+    <form action="/url" method="GET">
+        
+            <div id="divTopLabel">Conestoga Cafe <br> Always Fresh </div>
+            <br>
+            <div id="divMainContent">
+                <div class="content_img"><img class="image" src="images/Chess Pie.jpg"><br><span>Chess Pie</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Chocolate Chip Bread.jpg"><br><span>Chocolate Chip Bread</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Chocolate Potato Cake.jpg"><br><span>Chocolate Potato Cake</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Coffee Cake.jpg"><br><span>Coffee Cake</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Ginger Bread Cake.jpg"><br><span>Ginger Bread Cake</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Pecan Rum Bars.jpg"><br><span>Pecan Rum Bars</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Skillet Herb Bread.jpg"><br><span>Skillet Herb Bread</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Spice Cookies.jpg"><br><span>Spice Cookies</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Wild Rice Bread.jpg"><br><span>Wild Rice Bread</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+                <div class="content_img"><img class="image" src="images/Yeast Rolls.jpg"><br><span>Yeast Rolls</span>
+                    <div>Calories: 150</br>Fat: 5%</div>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Place Order" id="btnPlaceOrder" onclick="alert('Order Successful')">
+    </form>
+</body>
+</html>
